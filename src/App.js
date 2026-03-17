@@ -83,62 +83,78 @@ const App = () => {
           </button>
         </div>
       </nav>
+{/* Hero Section */}
+<section id="home" className="hero">
+  <div className="hero-bg">
+    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920" alt="Background" />
+    <div className="overlay"></div>
+  </div>
+  
+  <div className="hero-content">
+    <div className="hero-badge animate-fade-in">
+      <span className="pulse">🌱</span>
+      Premium Egyptian Herbs & Spices
+    </div>
+    
+    <h1 className="animate-slide-up">
+      Nature's Finest
+      <span className="highlight">From Egypt to You</span>
+    </h1>
+    
+    <p className="animate-slide-up delay-1">
+      Delivering premium quality herbs and spices with purity, consistency, and trust.
+    </p>
 
-      {/* Hero Section */}
-      <section id="home" className="hero">
-        <div className="hero-bg">
-          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920" alt="Background" />
-          <div className="overlay"></div>
-        </div>
-        
-        <div className="hero-content">
-          <div className="hero-badge animate-fade-in">
-            <span className="pulse">🌱</span>
-            Premium Egyptian Herbs & Spices
-          </div>
-          
-          <h1 className="animate-slide-up">
-            Nature's Finest
-            <span className="highlight">From Egypt to You</span>
-          </h1>
-          
-          <p className="animate-slide-up delay-1">
-            Delivering premium quality herbs and spices with purity, consistency, and trust.
-          </p>
-          
-          <div className="hero-features animate-slide-up delay-2">
-            <div className="feature-item">
-              <span className="check">✓</span>
-              ISO & FDA Certified
-            </div>
-            <div className="feature-item">
-              <span className="check">✓</span>
-              Europe & Gulf Export
-            </div>
-            <div className="feature-item">
-              <span className="check">✓</span>
-              Best Market Prices
-            </div>
-          </div>
-          
-          <div className="hero-buttons animate-slide-up delay-3">
-            <a href="#contact" className="btn-primary">
-              <span>Get Your Quote</span>
-              <span className="arrow">→</span>
-            </a>
-            <a href="#products" className="btn-outline">
-              Explore Products
-            </a>
-          </div>
-        </div>
-        
-        <div className="scroll-down">
-          <div className="mouse">
-            <div className="wheel"></div>
-          </div>
-        </div>
-      </section>
-
+    {/* ✨ AI Achievement Badge - إضافة مميزة ✨ */}
+    <div className="ai-achievement-badge animate-slide-up delay-2">
+      <div className="badge-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+          <circle cx="7.5" cy="14.5" r="1.5"/>
+          <circle cx="16.5" cy="14.5" r="1.5"/>
+        </svg>
+        <span className="badge-glow"></span>
+      </div>
+      <div className="badge-content">
+        <span className="badge-label">🏆 World First</span>
+        <p className="badge-text">
+          MS Herbs - The world's first company to utilize AI technology in drying, packaging, and processing of medicinal, aromatic herbs and spices
+        </p>
+      </div>
+    </div>
+    
+    <div className="hero-features animate-slide-up delay-3">
+      <div className="feature-item">
+        <span className="check">✓</span>
+        ISO & FDA Certified
+      </div>
+      <div className="feature-item">
+        <span className="check">✓</span>
+        Europe & Gulf Export
+      </div>
+      <div className="feature-item">
+        <span className="check">✓</span>
+        Best Market Prices
+      </div>
+    </div>
+    
+    <div className="hero-buttons animate-slide-up delay-4">
+      <a href="#contact" className="btn-primary">
+        <span>Get Your Quote</span>
+        <span className="arrow">→</span>
+      </a>
+      <a href="#products" className="btn-outline">
+        Explore Products
+      </a>
+    </div>
+  </div>
+  
+  <div className="scroll-down">
+    <div className="mouse">
+      <div className="wheel"></div>
+    </div>
+  </div>
+</section>
       {/* Statistics */}
       <section className="stats-section" id="stats">
         <div className="container">
@@ -405,6 +421,7 @@ const App = () => {
                   <div>
                     <strong>Email</strong>
                     <span>operation-manager@ms-herbs.com</span>
+                           <span>info@ms-herbs-eg.com</span>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -443,60 +460,77 @@ const App = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-top">
-            <div className="footer-brand">
-              <img src="/17.03.2026_19.00.14_REC.png" alt="MS Herbs" className="footer-logo" />
-              <p>Premium Egyptian Herbs & Spices Exporter. Delivering quality and excellence from Egypt to the world.</p>
-              <div className="social-links">
-                <a href="https://www.facebook.com/profile.php?id=61565730876093" target="_blank" rel="noopener noreferrer" className="social-link facebook">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                </a>
-                <a href="https://wa.me/201550333069" target="_blank" rel="noopener noreferrer" className="social-link whatsapp">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20.52 3.48a11.892 11.892 0 0 0-16.8 16.8l-1.86 6.8 6.94-1.82a11.892 11.892 0 0 0 16.8-16.8zM12 21.5c-1.4 0-2.76-.36-3.96-1.05l-.28-.17-4.12 1.08 1.1-4.03-.18-.28a9.518 9.518 0 1 1 7.44 4.45zm5.4-7.35c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.28.3-.47.1-.2.05-.37-.03-.52-.08-.15-.68-1.63-.93-2.23-.25-.59-.5-.51-.68-.52-.17 0-.37-.01-.57-.01s-.52.08-.79.37c-.27.28-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.13-.27-.2-.57-.35z"/>
-  </svg>
-</a>
-              </div>
-            </div>
-            
-            <div className="footer-links">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div className="footer-contact">
-              <h4>Contact</h4>
-              <div className="footer-contact-item">
-                <span className="icon">📧</span>
-                <p>operation-manager@ms-herbs.com</p>
-              </div>
-              <div className="footer-contact-item">
-                <span className="icon">📱</span>
-                <p>+201550333069</p>
-              </div>
-              <div className="footer-contact-item">
-                <span className="icon">📍</span>
-                <p>Sumusta, Beni Suef Governorate</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="footer-bottom">
-            <p>&copy; 2026 MS-Herbs. All rights reserved.</p>
+<footer className="footer">
+  <div className="container">
+    <div className="footer-top">
+      
+      <div className="footer-brand">
+        {/* ✨ اسم الشركة مع أيقونة مميزة ✨ */}
+        <div className="footer-logo-text">
+          <span className="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/>
+              <path d="M12 22c-2.5-2.5-4.5-5-5.5-8"/>
+              <path d="M12 22c2.5-2.5 4.5-5 5.5-8"/>
+              <path d="M12 14c-1.5-1.5-3-3-3-5a3 3 0 1 1 6 0c0 2-1.5 3.5-3 5z"/>
+            </svg>
+          </span>
+          <span className="logo-name">
+            MS <span className="logo-accent">Herbs</span>
+          </span>
+        </div>
+        
+        <p>Premium Egyptian Herbs & Spices Exporter. Delivering quality and excellence from Egypt to the world.</p>
+        
+        <div className="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61565730876093" target="_blank" rel="noopener noreferrer" className="social-link facebook" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/201550333069" target="_blank" rel="noopener noreferrer" className="social-link whatsapp" aria-label="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.52 3.48a11.892 11.892 0 0 0-16.8 16.8l-1.86 6.8 6.94-1.82a11.892 11.892 0 0 0 16.8-16.8zM12 21.5c-1.4 0-2.76-.36-3.96-1.05l-.28-.17-4.12 1.08 1.1-4.03-.18-.28a9.518 9.518 0 1 1 7.44 4.45zm5.4-7.35c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.17.2-.28.3-.47.1-.2.05-.37-.03-.52-.08-.15-.68-1.63-.93-2.23-.25-.59-.5-.51-.68-.52-.17 0-.37-.01-.57-.01s-.52.08-.79.37c-.27.28-1.04 1.02-1.04 2.49s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.1 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.13-.27-.2-.57-.35z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div className="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div className="footer-contact">
+        <h4>Contact</h4>
+        <div className="footer-contact-item">
+          <span className="icon">📧</span>
+          <div className="contact-text">
+             <p>operation-manager@ms-herbs.com</p>
+             <p>info@ms-herbs-eg.com</p>
           </div>
         </div>
-      </footer>
+        <div className="footer-contact-item">
+          <span className="icon">📱</span>
+          <p>+201550333069</p>
+        </div>
+        <div className="footer-contact-item">
+          <span className="icon">📍</span>
+          <p>Sumusta, Beni Suef Governorate</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className="footer-bottom">
+      <p>&copy; 2026 MS-Herbs. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };

@@ -1124,18 +1124,19 @@ section {
   width: 100%;
   justify-content: center;
 }
-
-/* Footer */
+/* Footer CSS */
 .footer {
-  background: var(--primary-dark);
+  background: var(--primary-dark); /* تأكد من تعريف هذا اللون في :root */
   color: var(--white);
+  padding-top: 4rem;
 }
 
 .footer-top {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 3.5rem;
-  padding: 4.5rem 0 3rem;
+  gap: 4rem; /* زيادة المسافة بين الأعمدة */
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* خط فاصل أنيق */
 }
 
 .footer-brand {
@@ -1143,179 +1144,206 @@ section {
 }
 
 .footer-logo {
-  height: 75px;
+  height: 70px;
   width: auto;
-  margin-bottom: 1.3rem;
-  filter: brightness(0) invert(1);
+  margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1); /* يجعل اللوجو أبيض */
 }
 
 .footer-brand p {
-  color: rgba(255,255,255,0.85);
-  line-height: 1.8;
-  margin-bottom: 1.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 2rem;
   font-size: 0.95rem;
 }
 
 .social-links {
   display: flex;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .social-link {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
-  background: rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* إطار خفيف */
+}
+
+.social-link svg {
+  fill: #FFFFFF; /* الأيقونة بيضاء دائماً */
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
 }
 
 .social-link:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
+  border-color: transparent;
 }
 
 .social-link.facebook:hover {
   background: #1877F2;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
 }
 
+.social-link.whatsapp:hover {
+  background: #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* Titles Styling */
 .footer-links h4,
 .footer-contact h4 {
   color: var(--white);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
   font-size: 1.1rem;
   font-weight: 600;
+  position: relative;
+  display: inline-block;
 }
 
+/* الخط الذهبي تحت العناوين */
+.footer-links h4::after,
+.footer-contact h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background: var(--accent); /* اللون الذهبي */
+}
+
+/* Links List */
 .footer-links ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
 }
 
 .footer-links a {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s ease;
   font-size: 0.95rem;
+  display: inline-block;
 }
 
 .footer-links a:hover {
   color: var(--accent);
-  padding-left: 5px;
+  transform: translateX(5px); /* حركة بسيطة لليمين */
 }
 
+/* Contact Items */
 .footer-contact-item {
   display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  margin-bottom: 1.1rem;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .footer-contact-item .icon {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.contact-text p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .footer-contact-item p {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
+  margin: 0;
 }
 
+/* Footer Bottom */
 .footer-bottom {
-  background: rgba(0,0,0,0.2);
-  padding: 1.8rem 0;
+  padding: 1.5rem 0;
   text-align: center;
 }
 
 .footer-bottom p {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 992px) {
-  .about-grid,
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-  
   .footer-top {
     grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
   
   .footer-brand {
     grid-column: 1 / -1;
     max-width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-links h4::after,
+  .footer-contact h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-links, .footer-contact {
+    text-align: center;
+  }
+  
+  .footer-contact-item {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
-  .nav-links,
-  .nav-cta {
-    display: none;
-  }
-  
-  .menu-toggle {
-    display: flex;
-  }
-  
-  .nav-links.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    padding: 1.5rem;
-    box-shadow: var(--shadow-lg);
-    gap: 1rem;
-  }
-  
-  .nav-links.active a {
-    color: var(--text-dark);
-  }
-  
-  .logo-img {
-    height: 45px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .highlight {
-    font-size: 2.2rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero-features {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  
   .footer-top {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+    text-align: center;
   }
   
-  .section-header h2 {
-    font-size: 2rem;
+  .footer-links h4::after,
+  .footer-contact h4::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  section {
-    padding: 4rem 0;
+  .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
   }
-} /* Loading Screen */
+  
+  .footer-links li {
+    margin: 0;
+  }
+  
+  .footer-contact-item {
+    justify-content: center;
+  }
+}
+ /* Loading Screen */
 .loading-screen {
   position: fixed;
   inset: 0;
@@ -1769,5 +1797,274 @@ section {
   
   .hero-stat-number {
     font-size: 2.2rem;
+  }
+}
+
+
+/* AI Achievement Badge - تصميم مميز */
+.ai-achievement-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.15), rgba(201, 162, 39, 0.05));
+  border: 2px solid rgba(201, 162, 39, 0.5);
+  border-radius: 16px;
+  padding: 1.3rem 1.8rem;
+  margin: 1.8rem 0 2.2rem;
+  max-width: 750px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(201, 162, 39, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* تأثير اللمعان */
+.ai-achievement-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.badge-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--accent), #f4d03f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+  z-index: 1;
+}
+
+.badge-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.6), transparent);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 0.4; }
+}
+
+.badge-icon svg {
+  position: relative;
+  z-index: 2;
+}
+
+.badge-content {
+  flex: 1;
+}
+
+.badge-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), #f4d03f);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-text {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Hover Effect */
+.ai-achievement-badge:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(201, 162, 39, 0.35);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ai-achievement-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem 1.3rem;
+    gap: 1rem;
+  }
+  
+  .badge-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .badge-text {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
+/* تحديث التأخيرات */
+.hero-features.animate-slide-up { animation-delay: 0.6s; }
+.hero-buttons.animate-slide-up { animation-delay: 0.8s; }
+
+/* Logo Text Style - اسم الشركة مع الأيقونة */
+.footer-logo-text {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--accent), #f4d03f);
+  border-radius: 12px;
+  color: var(--primary-dark);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-icon:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.5);
+}
+
+.logo-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary-dark);
+}
+
+.logo-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo-accent {
+  color: var(--accent);
+  position: relative;
+}
+
+/* تأثير بسيط تحت كلمة Herbs */
+.logo-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0.7;
+  border-radius: 2px;
+}
+
+/* تحديث الفقرة اللي تحت اللوجو */
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  font-size: 0.93rem;
+  padding-left: 3.2rem; /* محاذاة مع اللوجو النصي */
+}
+
+/* تحديث أيقونات السوشيال */
+.social-links {
+  display: flex;
+  gap: 0.9rem;
+  padding-left: 3.2rem; /* محاذاة مع اللوجو النصي */
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link svg {
+  fill: #FFFFFF;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+.social-link.facebook:hover {
+  background: #1877F2;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+
+.social-link.whatsapp:hover {
+  background: #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-logo-text {
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  
+  .footer-brand p,
+  .social-links {
+    padding-left: 0;
+    justify-content: center;
+  }
+  
+  .social-links {
+    margin-top: 0.5rem;
+  }
+  
+  .logo-name {
+    font-size: 1.4rem;
+  }
+  
+  .logo-icon {
+    width: 40px;
+    height: 40px;
   }
 }
