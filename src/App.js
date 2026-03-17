@@ -421,6 +421,7 @@ const App = () => {
                   <div>
                     <strong>Email</strong>
                     <span>operation-manager@ms-herbs.com</span>
+                    <br></br>
                            <span>info@ms-herbs-eg.com</span>
                   </div>
                 </div>

@@ -2067,4 +2067,93 @@ section {
     width: 40px;
     height: 40px;
   }
+}/* Footer Contact Section */
+.footer-contact h4 {
+  color: var(--white);
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-contact h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.footer-contact-item .icon {
+  font-size: 1.3rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* مسافة بين الإيميلات */
+}
+
+.contact-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin: 0;
+  word-break: break-all; /* عشان الإيميل الطويل مايخرجش */
+}
+
+.contact-text p:first-child {
+  margin-bottom: 0.2rem;
+}
+
+/* للإيميل التاني */
+.contact-text p:last-child {
+  opacity: 0.9;
+}
+
+/* باقي عناصر الكونتاكت */
+.footer-contact-item:nth-child(3) p,
+.footer-contact-item:nth-child(4) p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.93rem;
+  margin: 0;
+}
+
+/* Hover Effect على الإيميلات */
+.contact-text p:hover {
+  color: var(--accent);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-contact-item {
+    gap: 0.9rem;
+  }
+  
+  .contact-text {
+    gap: 0.3rem;
+  }
+  
+  .contact-text p {
+    font-size: 0.9rem;
+  }
 }
