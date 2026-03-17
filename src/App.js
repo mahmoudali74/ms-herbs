@@ -182,10 +182,7 @@ const App = () => {
               <div className="image-main">
                 
               </div>
-              <div className="experience-badge">
-                <span className="exp-number">20+</span>
-                <span className="exp-text">Years of<br/>Excellence</span>
-              </div>
+            
             </div>
             
             <div className={`about-content ${visibleSections.has('about') ? 'slide-in-right' : ''}`}>
